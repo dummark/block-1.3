@@ -23,16 +23,20 @@ body {
 }
 
 header {
-	display: flex;
 	background-color: white;
+}
+
+.header-container {
+	display: flex;
 	align-items: center;
 	height: 88px;
 	gap: 15px;
 	padding-left: 15px;
 	padding-right: 15px;
+	justify-content: space-between;
 }
 
-.circle {
+.header-container__circle {
 	display: flex;
 	width: 40px;
 	height: 35px;
@@ -49,6 +53,8 @@ header {
 
 main {
 	background-color: #f8f8f8;
+	min-width: 320px;
+	width: auto;
 }
 
 .heading {
@@ -85,12 +91,15 @@ ul::before {
 .container li {
 	height: 32px;
 	align-items: center;
-	text-decoration: none;
-	color: #7e7e82;
 	padding-top: 8px;
 	padding-left: 12px;
 	padding-right: 12px;
 	border-radius: 6px;
+}
+
+.container li a {
+	text-decoration: none;
+	color: #7e7e82;
 }
 
 .container li:hover {
@@ -111,38 +120,100 @@ article h2 {
 
 .container-2 {
 	display: flex;
+	flex-wrap: wrap;
 	font-size: 16px;
-	padding-left: 20px;
 	gap: 20px;
 	align-items: center;
 	margin: 20px 0;
 }
 
-.container-2 a {
+.container-2 a,
+.heading a {
 	font-family: 'TTLakes-thin', sans-serif;
 	text-decoration: none;
 	color: black;
 	font-weight: 900;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
-.container-2 a:hover {
+.container-2 a:hover,
+.heading a:hover {
 	text-shadow: 1px 1px 2px #b8ffec;
 }
 
 .logo {
 	margin-bottom: 30px;
-	width: auto;
-	height: auto;
-	min-width: 320px;
-	min-height: 176px;
+	width: 100%;
 }
 
 .extra-content {
 	display: none;
 }
 
-@media (min-width: 321px) {
+.extra-content-2 {
+	display: none;
+}
+
+@media (min-width: 769px) {
 	.extra-content {
 		display: flex;
 	}
+
+	.container-2 {
+		flex-wrap: nowrap;
+	}
+
+	.logo {
+		min-width: 360px;
+		min-height: 208px;
+	}
+
+	.spacer {
+		flex-grow: 1;
+	}
+}
+
+@media (min-width: 1121px) {
+	.extra-content-2 {
+		display: flex;
+	}
+
+	.text-center {
+		padding-bottom: 10px;
+	}
+
+	.container {
+		overflow: hidden;
+		flex-wrap: wrap;
+	}
+
+	.hide {
+		display: none;
+	}
+
+	.heading {
+		justify-content: space-between;
+	}
+
+	.spacer {
+		flex-grow: 1;
+	}
+
+	.logo {
+		min-width: 531.35;
+		min-height: 307;
+	}
+
+	.heading {
+		padding-right: 60px;
+	}
+
+	ul {
+		margin-top: 0;
+	}
+}
+
+.container-2 div img {
+	padding-left: 15px;
 }
