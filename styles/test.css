@@ -19,7 +19,7 @@
 body {
 	font-family: 'TTLakes', sans-serif;
 	margin: 0;
-	width: 320px;
+	width: 100%;
 }
 
 header {
@@ -125,6 +125,24 @@ article h2 {
 	font-weight: 900;
 }
 
+.container-2 a:hover {
+	text-shadow: 1px 1px 2px #b8ffec;
+}
+
 .logo {
 	margin-bottom: 30px;
+	width: auto;
+	height: auto;
+	min-width: 320px;
+	min-height: 176px;
+}
+
+.extra-content {
+	display: none;
+}
+
+@media (min-width: 321px) {
+	.extra-content {
+		display: flex;
+	}
 }
