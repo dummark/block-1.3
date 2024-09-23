@@ -41,7 +41,11 @@
 }
 
 .margin-right {
-	margin-right: 70px;
+	margin-right: 65px;
+}
+
+.shadow {
+	box-shadow: 5px 5px 10px -10px rgba(34, 60, 80, 0.6);
 }
 
 ul {
@@ -52,8 +56,8 @@ ul {
 	gap: 30px;
 	padding-left: 15px;
 	margin: 0;
-	height: 55vh;
 	overflow-y: scroll;
+	height: 55vh;
 }
 
 li a,
@@ -144,8 +148,4 @@ li a:hover,
 
 .spacer {
 	height: 5vh;
-}
-
-.shadow:hover {
-	background-color: #f1f1f5;
 }
